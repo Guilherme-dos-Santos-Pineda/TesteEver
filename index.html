@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ✏️ TROQUE: título e descrição (aparecem no Google e quando o link é compartilhado) -->
+  <title>Seu Nome — Filmes</title>
+  <meta name="description" content="Filmes, reels e cobertura de eventos. Vídeo com cara de cinema para marcas e pessoas.">
+  <meta property="og:title" content="Seu Nome — Filmes">
+  <meta property="og:description" content="Filmes, reels e cobertura de eventos.">
+  <meta property="og:image" content="assets/capa.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='34' fill='%23ff4d2e'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ MENU ============ -->
+<header class="nav" id="nav">
+  <a href="#topo" class="nav__logo">SEU NOME<span>.</span></a>
+  <div class="nav__rec mono"><i></i>REC <span id="timecode">00:00:00:00</span></div>
+  <nav class="nav__links" id="navLinks">
+    <a href="#projetos">Projetos</a>
+    <a href="#reels">Reels</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#processo">Processo</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Abrir menu"><span></span><span></span></button>
+</header>
+
+<main id="topo">
+
+<!-- ============ HERO: showreel de fundo ============ -->
+<section class="hero">
+  <!-- ✏️ TROQUE: assets/showreel.mp4 = vídeo de fundo (curto, sem som, ~15s, horizontal) -->
+  <video class="hero__bg" src="assets/showreel.mp4" poster="assets/showreel.jpg" autoplay muted loop playsinline></video>
+  <div class="hero__shade"></div>
+  <div class="viewfinder" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <div class="hero__content">
+    <p class="mono hero__kicker">Videomaker · Sua Cidade, UF</p>
+    <h1 class="hero__title">
+      <span class="line">Histórias reais,</span>
+      <span class="line">filmadas com <em>cuidado</em>.</span>
+    </h1>
+    <div class="hero__row">
+      <p class="hero__lead">Casamentos, eventos e marcas. Do primeiro take ao reel postado, sem enrolação e com cara de cinema.</p>
+      <div class="hero__actions">
+        <button class="btn btn--accent js-play" data-src="assets/showreel-completo.mp4">▶ Assistir showreel</button>
+        <a href="#" class="btn btn--line js-whats">Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAIXA ROLANDO ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Casamentos</span><b>✦</b><span>Eventos</span><b>✦</b><span>Marcas</span><b>✦</b><span>Reels</span><b>✦</b><span>Stories ao vivo</span><b>✦</b><span>Making of</span><b>✦</b>
+    <span>Casamentos</span><b>✦</b><span>Eventos</span><b>✦</b><span>Marcas</span><b>✦</b><span>Reels</span><b>✦</b><span>Stories ao vivo</span><b>✦</b><span>Making of</span><b>✦</b>
+  </div>
+</div>
+
+<!-- ============ PROJETOS (lista com prévia) ============ -->
+<section class="section" id="projetos">
+  <div class="wrap">
+    <header class="head">
+      <p class="mono label">01 / Projetos</p>
+      <h2>Trabalhos <em>selecionados</em></h2>
+    </header>
+
+    <!--
+      ✏️ TROQUE: cada linha é um projeto.
+      data-img = imagem que aparece ao passar o mouse | data-src = vídeo que abre ao clicar
+    -->
+    <ol class="projects">
+      <li class="project js-play" data-img="assets/projeto1.jpg" data-src="assets/projeto1.mp4">
+        <span class="mono project__n">01</span>
+        <span class="project__title">Ana &amp; Pedro</span>
+        <span class="project__cat">Casamento</span>
+        <span class="mono project__year">2026</span>
+      </li>
+      <li class="project js-play" data-img="assets/projeto2.jpg" data-src="assets/projeto2.mp4">
+        <span class="mono project__n">02</span>
+        <span class="project__title">Café da Praça</span>
+        <span class="project__cat">Marca · Reels</span>
+        <span class="mono project__year">2026</span>
+      </li>
+      <li class="project js-play" data-img="assets/projeto3.jpg" data-src="assets/projeto3.mp4">
+        <span class="mono project__n">03</span>
+        <span class="project__title">15 anos da Júlia</span>
+        <span class="project__cat">Evento</span>
+        <span class="mono project__year">2025</span>
+      </li>
+      <li class="project js-play" data-img="assets/projeto4.jpg" data-src="assets/projeto4.mp4">
+        <span class="mono project__n">04</span>
+        <span class="project__title">Studio Forma</span>
+        <span class="project__cat">Marca · Institucional</span>
+        <span class="mono project__year">2025</span>
+      </li>
+      <li class="project js-play" data-img="assets/projeto5.jpg" data-src="assets/projeto5.mp4">
+        <span class="mono project__n">05</span>
+        <span class="project__title">Making of — Bia</span>
+        <span class="project__cat">Retrato</span>
+        <span class="mono project__year">2025</span>
+      </li>
+    </ol>
+  </div>
+  <div class="peek" id="peek" aria-hidden="true"><img alt=""></div>
+</section>
+
+<!-- ============ REELS (carrossel vertical) ============ -->
+<section class="section section--dark" id="reels">
+  <div class="wrap head head--row">
+    <div>
+      <p class="mono label">02 / Reels</p>
+      <h2>Feito pra <em>tela do celular</em></h2>
+    </div>
+    <div class="arrows">
+      <button class="arrow" data-dir="-1" aria-label="Anterior">←</button>
+      <button class="arrow" data-dir="1" aria-label="Próximo">→</button>
+    </div>
+  </div>
+
+  <!-- ✏️ TROQUE: vídeos verticais (assets/reel1.mp4 ... reel6.mp4). Adicione ou remova à vontade. -->
+  <div class="reels" id="reelsTrack">
+    <button class="reel js-play" data-src="assets/reel1.mp4"><div class="media" data-label="reel 1"><video src="assets/reel1.mp4" muted loop playsinline preload="metadata"></video></div><span class="mono">Casamento · 0:32</span></button>
+    <button class="reel js-play" data-src="assets/reel2.mp4"><div class="media" data-label="reel 2"><video src="assets/reel2.mp4" muted loop playsinline preload="metadata"></video></div><span class="mono">Marca · 0:20</span></button>
+    <button class="reel js-play" data-src="assets/reel3.mp4"><div class="media" data-label="reel 3"><video src="assets/reel3.mp4" muted loop playsinline preload="metadata"></video></div><span class="mono">Evento · 0:45</span></button>
+    <button class="reel js-play" data-src="assets/reel4.mp4"><div class="media" data-label="reel 4"><video src="assets/reel4.mp4" muted loop playsinline preload="metadata"></video></div><span class="mono">Retrato · 0:18</span></button>
+    <button class="reel js-play" data-src="assets/reel5.mp4"><div class="media" data-label="reel 5"><video src="assets/reel5.mp4" muted loop playsinline preload="metadata"></video></div><span class="mono">Gastronomia · 0:25</span></button>
+    <button class="reel js-play" data-src="assets/reel6.mp4"><div class="media" data-label="reel 6"><video src="assets/reel6.mp4" muted loop playsinline preload="metadata"></video></div><span class="mono">Making of · 0:38</span></button>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section class="section" id="servicos">
+  <div class="wrap">
+    <header class="head">
+      <p class="mono label">03 / Serviços</p>
+      <h2>O que eu <em>faço</em></h2>
+    </header>
+
+    <!-- ✏️ TROQUE: serviços, descrição e preço. data-servico vai na mensagem do WhatsApp. -->
+    <div class="services">
+      <article class="service">
+        <div class="service__top"><span class="mono">A</span><h3>Eventos</h3></div>
+        <p>Casamentos, aniversários e festas. Cobertura completa, stories durante o evento e um filme com os melhores momentos.</p>
+        <ul class="mono"><li>Até 8h de cobertura</li><li>Stories em tempo real</li><li>Filme + reels em 7 dias</li></ul>
+        <div class="service__foot"><span class="price">a partir de <strong>R$ 0.000</strong></span><a href="#" class="link js-ask" data-servico="Eventos">Pedir orçamento →</a></div>
+      </article>
+      <article class="service">
+        <div class="service__top"><span class="mono">B</span><h3>Marcas</h3></div>
+        <p>Conteúdo para Instagram e TikTok com roteiro, captação e edição. Pra marca parecer tão boa quanto ela é.</p>
+        <ul class="mono"><li>Diária ou pacote mensal</li><li>Reels e fotos</li><li>Legenda e capa prontas</li></ul>
+        <div class="service__foot"><span class="price">a partir de <strong>R$ 000</strong></span><a href="#" class="link js-ask" data-servico="Marcas">Pedir orçamento →</a></div>
+      </article>
+      <article class="service">
+        <div class="service__top"><span class="mono">C</span><h3>Gestão de perfil</h3></div>
+        <p>Eu gravo, edito, planejo e publico. Você só aparece. Ideal pra quem não tem tempo de cuidar das redes.</p>
+        <ul class="mono"><li>Calendário de posts</li><li>Publicação e stories</li><li>Relatório mensal</li></ul>
+        <div class="service__foot"><span class="price">a partir de <strong>R$ 0.000/mês</strong></span><a href="#" class="link js-ask" data-servico="Gestão de perfil">Pedir orçamento →</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE + PROCESSO ============ -->
+<section class="section section--dark" id="processo">
+  <div class="wrap about">
+    <div class="about__photo">
+      <!-- ✏️ TROQUE: assets/perfil.jpg -->
+      <div class="media media--portrait" data-label="sua foto"><img src="assets/perfil.jpg" alt="Foto de perfil" loading="lazy"></div>
+    </div>
+    <div class="about__text">
+      <p class="mono label">04 / Quem filma</p>
+      <!-- ✏️ TROQUE: seu texto -->
+      <h2>Oi, eu sou o <em>Seu Nome</em>.</h2>
+      <p>Comecei filmando os amigos e nunca mais parei. Hoje transformo dias importantes e marcas pequenas em vídeos que dá vontade de assistir de novo.</p>
+      <p>Meu jeito é simples: chegar cedo, ser discreto, prestar atenção nos detalhes e entregar no prazo.</p>
+      <dl class="stats">
+        <div><dt class="mono">eventos</dt><dd>+80</dd></div>
+        <div><dt class="mono">marcas</dt><dd>+25</dd></div>
+        <div><dt class="mono">anos</dt><dd>4</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <ol class="steps">
+      <li><span class="step__n">1</span><h3>Conversa</h3><p>Você me conta a ideia, a data e o que espera do vídeo.</p></li>
+      <li><span class="step__n">2</span><h3>Roteiro</h3><p>Monto um plano de captação com o que não pode faltar.</p></li>
+      <li><span class="step__n">3</span><h3>Gravação</h3><p>No dia, eu cuido de tudo. Você só vive o momento.</p></li>
+      <li><span class="step__n">4</span><h3>Entrega</h3><p>Filme, reels e arquivos em alta, direto no seu WhatsApp.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section class="section" id="depoimentos">
+  <div class="wrap">
+    <header class="head">
+      <p class="mono label">05 / Quem já gravou</p>
+      <h2>O que dizem <em>por aí</em></h2>
+    </header>
+    <!-- ✏️ TROQUE: depoimentos reais dos clientes -->
+    <div class="quotes">
+      <figure class="quote"><blockquote>“Assisti o filme do casamento umas dez vezes. Ele pegou momentos que nem a gente viu.”</blockquote><figcaption class="mono">— Cliente, casamento</figcaption></figure>
+      <figure class="quote"><blockquote>“Nosso Instagram mudou de cara em um mês. Os reels trouxeram cliente novo de verdade.”</blockquote><figcaption class="mono">— Cliente, loja</figcaption></figure>
+      <figure class="quote"><blockquote>“Os convidados que não puderam ir acompanharam tudo pelos stories. Foi incrível.”</blockquote><figcaption class="mono">— Cliente, aniversário</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERGUNTAS ============ -->
+<section class="section section--dark" id="faq">
+  <div class="wrap faq">
+    <header class="head">
+      <p class="mono label">06 / Dúvidas</p>
+      <h2>Perguntas <em>frequentes</em></h2>
+    </header>
+    <!-- ✏️ TROQUE: perguntas e respostas -->
+    <div class="faq__list">
+      <details><summary>Como reservo uma data?</summary><p>Me chama no WhatsApp com a data e o local. Se estiver livre, a reserva é feita com um sinal e o restante é pago antes do evento.</p></details>
+      <details><summary>Em quanto tempo recebo os vídeos?</summary><p>Reels saem em até 7 dias. O filme completo, em até 30 dias, dependendo do pacote.</p></details>
+      <details><summary>Você viaja para outras cidades?</summary><p>Sim. Para fora da cidade é cobrado apenas o deslocamento.</p></details>
+      <details><summary>Recebo os arquivos originais?</summary><p>Você recebe os vídeos editados em alta qualidade. Material bruto pode ser combinado à parte.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section class="contact" id="contato">
+  <div class="wrap">
+    <p class="mono label">07 / Contato</p>
+    <h2 class="contact__title">Bora<br><em>gravar?</em></h2>
+    <div class="contact__grid">
+      <div class="contact__info">
+        <!-- ✏️ TROQUE: contatos (o número do WhatsApp fica no topo do script.js) -->
+        <a href="mailto:seuemail@gmail.com" class="contact__mail">seuemail@gmail.com</a>
+        <div class="contact__links">
+          <a href="#" class="btn btn--accent js-whats">WhatsApp</a>
+          <a href="https://instagram.com/seuperfil" target="_blank" rel="noopener" class="btn btn--line">Instagram</a>
+          <a href="https://tiktok.com/@seuperfil" target="_blank" rel="noopener" class="btn btn--line">TikTok</a>
+        </div>
+        <p class="mono muted">Sua Cidade, UF — atendo região e viagens</p>
+      </div>
+
+      <!-- O formulário monta a mensagem e abre o WhatsApp (funciona no GitHub Pages, sem servidor) -->
+      <form class="form" id="contactForm">
+        <div class="form__row">
+          <label><span class="mono">nome</span><input name="nome" required autocomplete="name"></label>
+          <label><span class="mono">data do evento</span><input name="data" type="date"></label>
+        </div>
+        <label><span class="mono">tipo</span>
+          <select name="tipo"><option>Casamento</option><option>Evento / festa</option><option>Conteúdo para marca</option><option>Gestão de perfil</option><option>Outro</option></select>
+        </label>
+        <label><span class="mono">conta um pouco</span><textarea name="msg" rows="3" required></textarea></label>
+        <button class="btn btn--accent" type="submit">Enviar pelo WhatsApp →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner mono">
+    <span>© <span id="year"></span> Seu Nome</span>
+    <span>Feito com café e muito take repetido</span>
+    <a href="#topo">↑ topo</a>
+  </div>
+</footer>
+
+<!-- Player em tela cheia -->
+<div class="modal" id="modal" aria-hidden="true">
+  <button class="modal__close mono" id="modalClose">fechar ✕</button>
+  <div class="modal__body" id="modalBody"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
